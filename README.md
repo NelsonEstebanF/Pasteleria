@@ -1,1 +1,2 @@
-# Pasteleria
+# le-patisserie
+Proyecto Django Pasteleria
