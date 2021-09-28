@@ -1,7 +1,6 @@
-from django.contrib import admin
-from .models import Dessert 
+from django.shortcuts import render
+from .models import Postre
 
-class CoreAdmin(admin.ModelAdmin):
-   readonly_fields = ('created','updated')
-
-admin.site.register(Dessert, CoreAdmin)
+def home(request):
+    prostrecitos = Postre().objects.all()
+    return render(request, 'core/index.html', {'postres': prostrecitos})

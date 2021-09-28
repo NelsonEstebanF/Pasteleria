@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Dessert
+from .models import Postre
 
-def home(request):
-    prostrecitos = Dessert.objects.all()
-    return render(request, 'core/index.html', {'postres': prostrecitos})
+def masita(request):
+    prostrecitos = Postre().objects.all()
+    return render(request, 'core/masita.html', {'postres': prostrecitos})

@@ -1,9 +1,9 @@
 from django.db.models import Model, CharField, TextField, DateTimeField, ImageField
 
-class Dessert(Model):
+class Postre(Model):
     title = CharField(max_length=50, verbose_name='Título')
     description = TextField(verbose_name='Descripción')
-    image = ImageField(upload_to='dessert')
+    image = ImageField(upload_to='Postre')
     created = DateTimeField(auto_now_add=True)
     updated = DateTimeField(auto_now=True)
 
